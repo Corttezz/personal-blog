@@ -59,10 +59,10 @@ const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-mo
 const setMainBackground = () => {
   const mainElement = document.getElementById('main');
   if (getCurrentTheme() === 'dark') {
-    mainElement.style.backgroundImage = "url('/src/img/dark-theme-background.png')";
+    mainElement.style.backgroundImage = "url('./src/img/dark-theme-background.png')";
     logoElement.src = "./src/img/logo-dark.png"; // Troca a imagem para o logo escuro
   } else {
-    mainElement.style.backgroundImage = "url('/src/img/light-theme-background.jpg')";
+    mainElement.style.backgroundImage = "url('./src/img/light-theme-background.jpg')";
     logoElement.src = "./src/img/logo.png"; // Troca a imagem para o logo claro
   }
 };
