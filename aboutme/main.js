@@ -39,6 +39,7 @@ function scrollUp(){
 window.addEventListener('scroll', scrollUp)
 
 
+
 /*==================== DARK LIGHT THEME ====================*/ 
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
@@ -59,11 +60,9 @@ const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-mo
 const setMainBackground = () => {
   const mainElement = document.getElementById('main');
   if (getCurrentTheme() === 'dark') {
-    mainElement.style.backgroundImage = "url('./src/img/dark-theme-background.png')";
-    logoElement.src = "./src/img/logo-dark.png"; // Troca a imagem para o logo escuro
+    logoElement.src = "../src/img/logo-dark.png"; // Troca a imagem para o logo escuro
   } else {
-    mainElement.style.backgroundImage = "url('./src/img/light-theme-background.jpg')";
-    logoElement.src = "./src/img/logo.png"; // Troca a imagem para o logo claro
+    logoElement.src = "../src/img/logo.png"; // Troca a imagem para o logo claro
   }
 };
 
@@ -78,71 +77,23 @@ if (selectedTheme) {
 
 // Activate / deactivate the theme manually with the button
 themeButton.addEventListener('click', () => {
-  // Add or remove the dark / icon theme
-  document.body.classList.toggle(darkTheme)
-  themeButton.classList.toggle(iconTheme)
-  // We save the theme and the current icon that the user chose
-  localStorage.setItem('selected-theme', getCurrentTheme())
-  localStorage.setItem('selected-icon', getCurrentIcon())
+    // Add or remove the dark / icon theme
+    document.body.classList.toggle(darkTheme)
+    themeButton.classList.toggle(iconTheme)
+    // We save the theme and the current icon that the user chose
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+  
+    // Define o background do main e o logo de acordo com o tema selecionado após a alteração
+    setMainBackground();
+  })
+  
 
-  // Define o background do main e o logo de acordo com o tema selecionado após a alteração
-  setMainBackground();
-})
 
-
-let isHovered = false;
-
-// Função para adicionar a classe com a animação pulse
-function applyPulseAnimation() {
-  const animatedDiv = document.getElementById('animatedDiv');
-  animatedDiv.classList.add('animate__pulse');
+  /*==================== SHOW SCROLL UP ====================*/ 
+function scrollUp(){
+    const scrollUp = document.getElementById('scroll-up');
+    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
+    if(this.scrollY >= 260) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
 }
-
-// Função para remover a classe com a animação pulse após 2 segundos (2000 milissegundos)
-function removePulseAnimation() {
-  const animatedDiv = document.getElementById('animatedDiv');
-  animatedDiv.classList.remove('animate__pulse');
-}
-
-// Repete a animação a cada 10 segundos (10000 milissegundos)
-setInterval(function() {
-  if (!isHovered) {
-    applyPulseAnimation();
-    setTimeout(removePulseAnimation, 4000);
-  }
-}, 10000);
-
-// Evento para definir a variável 'isHovered' quando o mouse estiver sobre o elemento
-const animatedDiv = document.getElementById('animatedDiv');
-animatedDiv.addEventListener('mouseenter', function() {
-  isHovered = true;
-});
-
-// Evento para redefinir a variável 'isHovered' quando o mouse sair do elemento
-animatedDiv.addEventListener('mouseleave', function() {
-  isHovered = false;
-});
-
-
-/* =============== SERVICES MODAL =============== */
-const modalViews = document.querySelectorAll('.picrew__modal'),
-    modalBtns = document.querySelectorAll('.picrew__button'),
-    modalCloses = document.querySelectorAll('.picrew__modal-close')
-
-let modal = function (modalClick) {
-    modalViews[modalClick].classList.add('active-modal')
-}
-
-modalBtns.forEach((modalBtn, i) => {
-    modalBtn.addEventListener('click', () => {
-        modal(i)
-    })
-})
-
-modalCloses.forEach((modalClose) => {
-    modalClose.addEventListener('click', () => {
-        modalViews.forEach((modalView) => {
-            modalView.classList.remove('active-modal')
-        })
-    })
-})
+window.addEventListener('scroll', scrollUp)
