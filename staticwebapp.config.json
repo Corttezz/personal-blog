@@ -1,8 +1,9 @@
 {
     "routes": [
       {
-        "route": "/:filename",
-        "serve": "/:filename.html"
+        "route": "/*",
+        "rewrite": "/{path}.html",
+        "statusCode": 200
       }
     ]
   }
