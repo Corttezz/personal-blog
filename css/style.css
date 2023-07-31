@@ -445,21 +445,25 @@ img {
 
 /* =============== Change background header =============== */
 
-.post__viewmore a {
+.post__viewmore {
     margin-top: 40px;
     display: block;
-    margin-bottom: var(--mb-3);
     text-align: center;
-    transition: transform 0.3s ease;
-}  
-
-.post__viewmore a {
     color: var(--first-color);
-}
-
-.post__viewmore a:hover{
+    overflow: hidden; /* Adicionando overflow: hidden para evitar que o conteúdo vaze e aumente a página */
+  }
+  
+  .post__viewmore a {
+    display: inline-block; /* Altere para 'inline-block' para evitar que o elemento se expanda horizontalmente */
+    transition: transform 0.3s ease;
+    /* Defina o ponto de transformação no centro do elemento */
+    transform-origin: center;
+  }
+  
+  .post__viewmore a:hover {
     transform: scale(1.1);
-}
+  }
+  
 
 .scroll-header {
     box-shadow: 0 -1px 4px rgb(0, 0, 0, .15);
@@ -1146,3 +1150,8 @@ contact__label {
 .button__contact:hover {
     background-color: var(--first-color-alt);
 }
+
+::selection {
+    background-color: var(--first-color); /* Cor de fundo da seleção */
+    color: var(--first-color-second); /* Cor do texto selecionado */
+  }
