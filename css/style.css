@@ -237,7 +237,25 @@ img {
     border-top: 2px solid var(--first-color);
     justify-content: center;
     align-items: center;
+    transition: .3s;
 }
+
+
+.bottom__section-section:hover {
+    background-color: var(--container-color);
+    border-radius: .25rem;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, .15);
+    border: solid 1px var(--first-color);
+    padding: 20px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, .15);
+    transform: scale(1.005);
+    cursor: pointer;
+}
+
+
+
+
+
 
 /* =============== NAV =============== */
 .nav {
@@ -1155,3 +1173,10 @@ contact__label {
     background-color: var(--first-color); /* Cor de fundo da seleção */
     color: var(--first-color-second); /* Cor do texto selecionado */
   }
+
+
+
+
+
+
+  
