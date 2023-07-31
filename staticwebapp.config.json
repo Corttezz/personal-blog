@@ -1,7 +1,9 @@
 {
-    "navigationFallback": {
-      "rewrite": "/index.html",
-      "exclude": ["/api/*"]
-    }
+    "routes": [
+      {
+        "route": "/:filename",
+        "serve": "/:filename.html"
+      }
+    ]
   }
   
