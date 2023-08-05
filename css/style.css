@@ -143,6 +143,7 @@ img {
     height: auto;
 }
 
+
 #main{
     background-image: url('../src/img/light-theme-background.webp');
     background-size: cover;
@@ -569,6 +570,14 @@ img {
     transition: .3s;
 }
 
+span a {
+    color: var(--span-color);
+}
+
+span i {
+    font-size: small;
+}
+
 .home__scroll-button:hover {
     transform: translateY(.25rem);
 }
@@ -864,7 +873,7 @@ img {
 
 .services__content:hover {
     box-shadow: 0 8px 10px rgba(0, 0, 0, .15);
-    transform: scale(1.005);
+    transform: scale(1.008);
 }
 
 .services__icon {
@@ -888,6 +897,12 @@ img {
 
 .post__img img{
     border-radius: 33px;
+}
+
+.post__img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .services__button {

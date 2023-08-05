@@ -60,9 +60,9 @@ const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-mo
 const setMainBackground = () => {
   const mainElement = document.getElementById('main');
   if (getCurrentTheme() === 'dark') {
-    logoElement.src = "../src/img/logo-dark.png"; // Troca a imagem para o logo escuro
+    logoElement.src = "../src/img/logo-dark.webp"; // Troca a imagem para o logo escuro
   } else {
-    logoElement.src = "../src/img/logo.png"; // Troca a imagem para o logo claro
+    logoElement.src = "../src/img/logo.webp"; // Troca a imagem para o logo claro
   }
 };
 
