@@ -1091,6 +1091,8 @@ span i {
     text-align: center
 }
 
+
+
 .social .social__item {
     display: inline-block;
     margin: 0 3px
@@ -1116,7 +1118,7 @@ span i {
     background-color: var(--first-color)
 }
 
-.social .social__link:hover {
+footer .social .social__link:hover {
     color: var(--first-color);
     background-color: var(--first-color-second)
 }
