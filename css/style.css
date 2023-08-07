@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
 
 :root {
     --header-height: 3rem;
@@ -905,6 +906,21 @@ span i {
     align-items: center;
 }
 
+.post__title{
+    margin-top: 120px;
+}
+  
+.post__img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.desc__post img{
+    height: 60s0px;
+}
+
 .services__button {
     cursor: pointer;
     font-size: var(--small-font-size)
@@ -1193,7 +1209,124 @@ contact__label {
 
 
 
+.button--flex {
+    display: inline-block;
+}
+
+.viewMore-lang {
+    display: inline-block;
+    margin: 0;
+}
+
+.viewMore-lang2 {
+    display: inline-block;
+    margin: 0;
+}
+
+.viewMore-lang3 {
+    display: inline-block;
+    margin: 0;
+}
+
+.viewMore-lang4 {
+    display: inline-block;
+    margin: 0;
+}
+
+.viewMore-lang5 {
+    display: inline-block;
+    margin: 0;
+}
+
+.copyright p{
+    display: inline;
+    margin: 0;
+}
+
+.button__icon {
+    display: inline-block;
+}
+
+.lang-menu {
+    width: 28px;
+    text-align: right;
+    font-weight: bold;
+    position: relative;
+    padding-top: 10px;
+}
+.lang-menu .selected-lang {
+    display: flex;   
+    cursor: pointer;
+}
+
+
+.lang-menu .selected-lang:before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../src/img/portuguese.webp");
+}
+
+.lang-menu ul {
+    margin: 0;
+    padding: 0;
+    display: none;
+    background-color: #fff;
+    border: 1px solid #f8f8f8;
+    position: absolute;
+    top: 40px;
+    right: -50px;
+    width: 125px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+}
+
+
+.lang-menu ul li {
+    list-style: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lang-menu ul li a {
+    text-decoration: none;
+    width: 125px;
+    padding: 5px 10px;
+    display: block;
+}
+
+.lang-menu ul li:hover {
+    background-color: #f2f2f2;
+}
+
+.lang-menu ul li a:before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.en:before {
+    background-image: url("../src/img/english.webp");
+}
+
+.es:before {
+    background-image: url("../src/img/spanish.webp");
+}
+.pt:before {
+    background-image: url("../src/img/portuguese.webp");
+}
 
 
 
-  
+.lang-menu ul.show {
+    display: block;
+}
