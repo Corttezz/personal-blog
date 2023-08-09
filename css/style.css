@@ -1252,15 +1252,14 @@ contact__label {
     text-align: right;
     font-weight: bold;
     position: relative;
-    padding-top: 10px;
+    padding-top: 14px;
+    padding-left: 13px;
+    padding-right: 20px;
 }
-.lang-menu .selected-lang {
+
+.selected-lang {
     display: flex;   
     cursor: pointer;
-}
-
-
-.lang-menu .selected-lang:before {
     content: '';
     display: inline-block;
     width: 32px;
@@ -1270,18 +1269,20 @@ contact__label {
     background-image: url("../src/img/portuguese.webp");
 }
 
+
+
 .lang-menu ul {
     margin: 0;
     padding: 0;
     display: none;
-    background-color: #fff;
-    border: 1px solid #f8f8f8;
+    background-color: var(--first-color-second);
     position: absolute;
     top: 40px;
     right: -50px;
     width: 125px;
     border-radius: 5px;
     box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    border: solid 2px var(--first-color);
 }
 
 
@@ -1300,7 +1301,7 @@ contact__label {
 }
 
 .lang-menu ul li:hover {
-    background-color: #f2f2f2;
+    background-color: var(--first-color-second);
 }
 
 .lang-menu ul li a:before {

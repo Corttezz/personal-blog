@@ -13,8 +13,8 @@ viewMoreLang2 = document.querySelector(".viewMore-lang2"),
 viewMoreLang3 = document.querySelector(".viewMore-lang3"),
 viewMoreLang4 = document.querySelector(".viewMore-lang4"),
 viewMoreLang5 = document.querySelector(".viewMore-lang5"),
-viewMoreLang6 = document.querySelector(".viewMore-lang6")
-viewMoreLang7 = document.querySelector(".viewMore-lang7")
+viewMoreLang6 = document.querySelector(".viewMore-lang6"),
+viewMoreLang7 = document.querySelector(".viewMore-lang7"),
 webstaticappsLang = document.querySelector(".webstaticapps-lang"),
 IAChallangesLang = document.querySelector(".IAChallanges-lang"),
 aboutMeLang = document.querySelector(".aboutMe-lang"),
@@ -83,7 +83,7 @@ let data = {
         "aboutLang": "ABOUT",
         "contactLang": "CONTACT",
         "lastPostsLang": "Last Posts",
-        "whatIThinkLang": "My Opinions",
+        "whatIThinkLang": "What i think",
         "mlsaLang": "How to Become a Microsoft Student Ambassador",
         "viewMoreLang": "View More",
         "viewMoreLang2": "View More",
@@ -125,47 +125,64 @@ let data = {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-    const langMenu = document.querySelector(".lang-menu");
-    const langSubMenu = langMenu.querySelector("ul");
-    const links = langSubMenu.querySelectorAll("a");
-    const selectedFlag = document.querySelector(".selected-lang");
+  const langMenu = document.querySelector(".lang-menu");
+  const langSubMenu = langMenu.querySelector("ul");
+  const links = langSubMenu.querySelectorAll("a");
+  const selectedFlag = document.querySelector(".selected-lang");
+  const title = document.querySelector(".title"); // Assuming you have an element with class "title"
+  const descr = document.querySelector(".description"); // Assuming you have an element with class "description"
 
-    // Set the active flag initially based on the default language
-    
+  // Get the selected language from Local Storage (or default to 'english')
+  let selectedLanguage = localStorage.getItem("selectedLanguage") || "english";
 
-    langMenu.addEventListener("click", function () {
-        langSubMenu.classList.toggle("show");
-    });
+  // Set the initial language
+  title.textContent = data[selectedLanguage].title;
+  descr.textContent = data[selectedLanguage].description;
 
-    // Close the menu when clicking outside
-    document.addEventListener("click", function (event) {
-        if (!langMenu.contains(event.target)) {
-            langSubMenu.classList.remove("show");
-        }
-    });
+  // Set the selected language flag
+  if (selectedLanguage === "english") {
+      selectedFlag.style.backgroundImage = 'url("./src/img/english.webp")';
+  } else if (selectedLanguage === "portuguese") {
+      selectedFlag.style.backgroundImage = 'url("./src/img/portuguese.webp")';
+  } else if (selectedLanguage === "spanish") {
+      selectedFlag.style.backgroundImage = 'url("./src/img/spanish.webp")';
+  }
 
-    links.forEach(link => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
+  langMenu.addEventListener("click", function () {
+      langSubMenu.classList.toggle("show");
+  });
 
-            // Remove 'active' class from all links
-            links.forEach(link => {
-                link.classList.remove("active");
-            });
+  document.addEventListener("click", function (event) {
+      if (!langMenu.contains(event.target)) {
+          langSubMenu.classList.remove("show");
+      }
+  });
 
-            // Add 'active' class to the clicked link
-            link.classList.add("active");
+  links.forEach(link => {
+      link.addEventListener("click", function (event) {
+          event.preventDefault();
 
-            // Update the selected flag image
+          links.forEach(link => {
+              link.classList.remove("active");
+          });
 
-            // Your existing code to update content based on selected language
-            let attr = link.getAttribute("language");
-            title.textContent = data[attr].title;
-            descr.textContent = data[attr].description;
-            // ... (other content updates)
-        });
-    });
+          link.classList.add("active");
+
+          let attr = link.getAttribute("language");
+          title.textContent = data[attr].title;
+          descr.textContent = data[attr].description;
+
+          // Update the selected flag image based on language
+          if (attr === "english") {
+              selectedFlag.style.backgroundImage = 'url("./src/img/english.webp")';
+          } else if (attr === "portuguese") {
+              selectedFlag.style.backgroundImage = 'url("./src/img/portuguese.webp")';
+          } else if (attr === "spanish") {
+              selectedFlag.style.backgroundImage = 'url("./src/img/spanish.webp")';
+          }
+
+          // Store the selected language in Local Storage
+          localStorage.setItem("selectedLanguage", attr);
+      });
+  });
 });
-
-
-// Your language data...
