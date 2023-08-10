@@ -48,55 +48,74 @@ let data = {
     homeLang: "INÍCIO",
     aboutLang: "SOBRE",
     contactLang: "CONTATO",
-    contactMeLang: "ENTRE EM CONTATO",
-    getInTouchLang: "ENTRE EM CONTATO",
-    callMeLang: "LIGUE PARA MIM",
-    locationLang: "LOCALIZAÇÃO",
-    nameLang: "NOME",
-    projectLang: "PROJETO",
-    messageLang: "MENSAGEM",
-    aboutMeLang: "SOBRE MIM",
-    aboutContentLang: "CONTEÚDO SOBRE",
-    myPostsLang: "MEUS POSTS",
-    postsResumeLang: "Explore todas as minhas postagens e venha conhecer todo o meu conteúdo.",
+    contactMeLang: "Contato",
+    getInTouchLang: "Entre em contato",
+    callMeLang: "Ligue-me",
+    locationLang: "Localização",
+    nameLang: "Nome",
+    projectLang: "Projeto",
+    messageLang: "Mensagem",
+    aboutMeLang: "Sobre Mim",
+    aboutContentLang: "Conteúdo Sobre Mim",
+    myPostsLang: "Minhas Publicações",
+    postsResumeLang: "Explore todas as minhas publicações e conheça todo o meu conteúdo.",
     rightReservedLang: "Todos os direitos reservados."
-  },
+},
   english: {
-    homeLang: "INÍCIO",
-    aboutLang: "SOBRE",
-    contactLang: "CONTATO",
-    contactMeLang: "ENTRE EM CONTATO",
-    getInTouchLang: "ENTRE EM CONTATO",
-    callMeLang: "LIGUE PARA MIM",
-    locationLang: "LOCALIZAÇÃO",
-    nameLang: "NOME",
-    projectLang: "PROJETO",
-    messageLang: "MENSAGEM",
-    aboutMeLang: "SOBRE MIM",
-    aboutContentLang: "CONTEÚDO SOBRE",
-    myPostsLang: "MEUS POSTS",
-    postsResumeLang: "Explore todas as minhas postagens e venha conhecer todo o meu conteúdo.",
-    rightReservedLang: "Todos os direitos reservados."
+    homeLang: "HOME",
+    aboutLang: "ABOUT",
+    contactLang: "CONTACT",
+    contactMeLang: "Contact Me",
+    getInTouchLang: "Get in touch",
+    callMeLang: "Call me",
+    locationLang: "Location",
+    nameLang: "Name",
+    projectLang: "Project",
+    messageLang: "Message",
+    aboutMeLang: "About Me",
+    aboutContentLang: "About Content",
+    myPostsLang: "My Posts",
+    postsResumeLang: "Explore all my posts and get to know all my content.",
+    rightReservedLang: "All rights reserved."
   },
   spanish: {
-    homeLang: "INÍCIO",
+    homeLang: "INICIO",
     aboutLang: "SOBRE",
-    contactLang: "CONTATO",
-    contactMeLang: "ENTRE EM CONTATO",
-    getInTouchLang: "ENTRE EM CONTATO",
-    callMeLang: "LIGUE PARA MIM",
-    locationLang: "LOCALIZAÇÃO",
-    nameLang: "NOME",
-    projectLang: "PROJETO",
-    messageLang: "MENSAGEM",
-    aboutMeLang: "SOBRE MIM",
-    aboutContentLang: "CONTEÚDO SOBRE",
-    myPostsLang: "MEUS POSTS",
-    postsResumeLang: "Explore todas as minhas postagens e venha conhecer todo o meu conteúdo.",
-    rightReservedLang: "Todos os direitos reservados."
-  },
+    contactLang: "CONTACTO",
+    contactMeLang: "Contáctame",
+    getInTouchLang: "Ponte en contacto",
+    callMeLang: "Llámame",
+    locationLang: "Ubicación",
+    nameLang: "Nombre",
+    projectLang: "Proyecto",
+    messageLang: "Mensaje",
+    aboutMeLang: "Sobre Mí",
+    aboutContentLang: "Contenido Sobre Mí",
+    myPostsLang: "Mis Publicaciones",
+    postsResumeLang: "Explora todas mis publicaciones y conoce todo mi contenido.",
+    rightReservedLang: "Todos los derechos reservados."
+},
   // Add more languages as needed
 };
+
+
+function applyLanguage(language) {
+  homeLang.textContent = data[language].homeLang;
+  aboutLang.textContent = data[language].aboutLang;
+  contactLang.textContent = data[language].contactLang;
+  contactMeLang.textContent = data[language].contactMeLang;
+  getInTouchLang.textContent = data[language].getInTouchLang;
+  callMeLang.textContent = data[language].callMeLang;
+  locationLang.textContent = data[language].locationLang;
+  nameLang.textContent = data[language].nameLang;
+  projectLang.textContent = data[language].projectLang;
+  messageLang.textContent = data[language].messageLang;
+  aboutMeLang.textContent = data[language].aboutMeLang;
+  aboutContentLang.textContent = data[language].aboutContentLang;
+  myPostsLang.textContent = data[language].myPostsLang;
+  postsResumeLang.textContent = data[language].postsResumeLang;
+  rightReservedLang.textContent = data[language].rightReservedLang;
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   const langMenu = document.querySelector(".lang-menu");
@@ -109,6 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Get the selected language from Local Storage (or default to 'english')
   let selectedLanguage = localStorage.getItem("selectedLanguage") || "english";
 
+  applyLanguage(selectedLanguage);
 
   // Set the selected language flag
   if (selectedLanguage === "english") {

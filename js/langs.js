@@ -124,6 +124,32 @@ let data = {
  },
 };
 
+function applyLanguage(language) {
+    homeLang.textContent = data[language].homeLang;
+    aboutLang.textContent = data[language].aboutLang;
+    contactLang.textContent = data[language].contactLang;
+    lastPostsLang.textContent = data[language].lastPostsLang;
+    whatIThinkLang.textContent = data[language].whatIThinkLang;
+    mlsaLang.textContent = data[language].mlsaLang;
+    viewMoreLang.textContent = data[language].viewMoreLang;
+    viewMoreLang2.textContent = data[language].viewMoreLang2;
+    viewMoreLang3.textContent = data[language].viewMoreLang3;
+    viewMoreLang4.textContent = data[language].viewMoreLang4;
+    viewMoreLang5.textContent = data[language].viewMoreLang5;
+    viewMoreLang6.textContent = data[language].viewMoreLang6;
+    viewMoreLang7.textContent = data[language].viewMoreLang7;
+    webstaticappsLang.textContent = data[language].webstaticappsLang;
+    IAChallangesLang.textContent = data[language].IAChallangesLang;
+    aboutMeLang.textContent = data[language].aboutMeLang;
+    aboutContentLang.textContent = data[language].aboutContentLang;
+    myPostsLang.textContent = data[language].myPostsLang;
+    postsResumeLang.textContent = data[language].postsResumeLang;
+    rightReservedLang.textContent = data[language].rightReservedLang;
+}
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const langMenu = document.querySelector(".lang-menu");
   const langSubMenu = langMenu.querySelector("ul");
@@ -134,6 +160,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Get the selected language from Local Storage (or default to 'english')
   let selectedLanguage = localStorage.getItem("selectedLanguage") || "english";
+
+  applyLanguage(selectedLanguage);
 
   // Set the initial language
   title.textContent = data[selectedLanguage].title;
