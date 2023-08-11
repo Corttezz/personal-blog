@@ -190,8 +190,6 @@ document.addEventListener("DOMContentLoaded", function () {
           link.classList.add("active");
 
           let attr = link.getAttribute("language");
-          title.textContent = data[attr].title;
-          descr.textContent = data[attr].description;
 
           // Update the selected flag image based on language
           if (attr === "english") {
