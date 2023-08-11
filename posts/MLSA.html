@@ -11,96 +11,187 @@
 <body>
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="../index.html" class="nav__logo"> <img class="logo" src="../src/img/logo.webp" width="170px"> </a>
+            <a href="../index.html" class="nav__logo"> <img class="logo" src="../src/img/logo.webp" width="170px" alt="logo"> </a>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list grid">
                     <li class="nav__item">
-                        <a href="../index.html" class="nav__link active-link">
-                            <i class="uil uil-estate nav__icon"></i> HOME
+                        <a href="./index.html" class="nav__link active-link" aria-label="HOME">
+                            <i class="uil uil-estate nav__icon"></i> <p class="home-lang"> HOME </p> 
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="../aboutme/index.html" class="nav__link">
-                            <i class="uil uil-user nav__icon"></i> ABOUT
+                        <a href="./aboutme/index.html" class="nav__link" aria-label="ABOUT">
+                            <i class="uil uil-user nav__icon"></i> <p class="about-lang" > ABOUT </p>
                         </a>
                     </li>
 
 
-                    </li>
+                    
                     <li class="nav__item">
-                        <a href="../contact/index.html" class="nav__link">
-                            <i class="uil uil-message nav__icon"></i> CONTACT
+                        <a href="./contact/index.html" class="nav__link" aria-label="CONTACT">
+                            <i class="uil uil-message nav__icon"></i> <p class="contact-lang"> CONTACT </p> 
                         </a>
                     </li>
+                    
                 </ul>
                 <i class="uil uil-times nav__close" id="nav-close"></i>
             </div>
 
+
+           
+
+
             <div class="nav__btns">
+                <!-- Theme change button -->
                 <i class="uil uil-moon change-theme" id="theme-button"></i>
 
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="uil uil-apps"></i>
                 </div>
+
+               
+
+                <div class="lang-menu langs">
+                    <div class="selected-lang">
+                    </div>
+                    <ul>
+                        <li>
+                            <a language="english" href="" class="en active"> EN </a>
+                        </li>
+                        <li>
+                            <a language="portuguese" href="" class="pt">PT-BR</a>
+                        </li>
+                        <li>
+                            <a language="spanish" href="" class="es"> ES </a>
+                        </li>
+                    </ul> 
+                    
+                </div>
+                
             </div>
 
         </nav>
     </header>
+<main>
 
-    <section class="section bottom__section container">
-        <div class="aboutMe__section bottom__section-section">
-            <h3 class="section__title bottom__section-title"> About me </h3>
-            <p class="bottom__section-content"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae facilis animi aspernatur ipsa qui debitis
-                minus, fuga esse vero? Esse nobis cupiditate asperiores tempora, laborum ab. Nam facere sequi eos!</p>
-                <span class="button button--flex button--small button--link services__button">
-                  <a href="../aboutme/index.html"> View More </a> 
-                    <i class="uil uil-arrow-right button__icon"></i>
-        </div>
-        <div class="projects__section bottom__section-section">
-            <h3 class="section__title bottom__section-title"> My Posts</h3>
-            <p class="bottom__section-content"> Explore all of my posts here and delve into more exciting content </p>
-             <span class="button button--flex button--small button--link services__button">
-               <a href="../posts.html"> View More  </a> 
-                <i class="uil uil-arrow-right button__icon"></i> 
-        </div>
+    <div class="container post__container">
+        <h1 class="section__title post__title"> Bla bla bla </h1>
+        <h2 class="section__subtitle"> bla bla </h2>
+        <h2 class="section__subtitle authorNdate"> <a class="desc__post" href="../aboutme/index.html">Daniel Cortez</a> - 06 de ago. de 2023</h2>
+       <div class="post__img">
+        <img src="../src/img/AzureStaticWebApps.webp" alt="">
+    </div>
+        <div class="post__content">
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio nesciunt exercitationem iusto pariatur voluptatibus temporibus ipsam tempora, quo neque culpa maiores laboriosam sit commodi magnam nulla, architecto quaerat eius veritatis.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae odit ducimus esse repellat alias ab eum debitis voluptates. Possimus nihil repudiandae doloribus eveniet distinctio et illo reprehenderit! Deserunt, explicabo facilis?
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, rerum aliquam. Voluptatem amet totam, labore doloremque quas aperiam, nam eos optio veritatis repellendus itaque id explicabo quos sequi corporis asperiores.
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis recusandae voluptate exercitationem sed ad aperiam at obcaecati, quis vero fugit? Quo ipsum culpa cumque nesciunt numquam quaerat qui, animi delectus?
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio nesciunt exercitationem iusto pariatur voluptatibus temporibus ipsam tempora, quo neque culpa maiores laboriosam sit commodi magnam nulla, architecto quaerat eius veritatis.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae odit ducimus esse repellat alias ab eum debitis voluptates. Possimus nihil repudiandae doloribus eveniet distinctio et illo reprehenderit! Deserunt, explicabo facilis?
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, rerum aliquam. Voluptatem amet totam, labore doloremque quas aperiam, nam eos optio veritatis repellendus itaque id explicabo quos sequi corporis asperiores.
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis recusandae voluptate exercitationem sed ad aperiam at obcaecati, quis vero fugit? Quo ipsum culpa cumque nesciunt numquam quaerat qui, animi delectus?
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio nesciunt exercitationem iusto pariatur voluptatibus temporibus ipsam tempora, quo neque culpa maiores laboriosam sit commodi magnam nulla, architecto quaerat eius veritatis.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae odit ducimus esse repellat alias ab eum debitis voluptates. Possimus nihil repudiandae doloribus eveniet distinctio et illo reprehenderit! Deserunt, explicabo facilis?
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, rerum aliquam. Voluptatem amet totam, labore doloremque quas aperiam, nam eos optio veritatis repellendus itaque id explicabo quos sequi corporis asperiores.
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis recusandae voluptate exercitationem sed ad aperiam at obcaecati, quis vero fugit? Quo ipsum culpa cumque nesciunt numquam quaerat qui, animi delectus?
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio nesciunt exercitationem iusto pariatur voluptatibus temporibus ipsam tempora, quo neque culpa maiores laboriosam sit commodi magnam nulla, architecto quaerat eius veritatis.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae odit ducimus esse repellat alias ab eum debitis voluptates. Possimus nihil repudiandae doloribus eveniet distinctio et illo reprehenderit! Deserunt, explicabo facilis?
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, rerum aliquam. Voluptatem amet totam, labore doloremque quas aperiam, nam eos optio veritatis repellendus itaque id explicabo quos sequi corporis asperiores.
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis recusandae voluptate exercitationem sed ad aperiam at obcaecati, quis vero fugit? Quo ipsum culpa cumque nesciunt numquam quaerat qui, animi delectus?
+</div> 
+</div>
+<h2 class="section__title"> Share </h2>
+<div class="social social__share">
+    <ul class="social__list">
+        <li class=social__item>
+            <a class="social__link" href="https://www.facebook.com/sharer/sharer.php?u=https://www.dancortez.com.br/posts/webstaticapps.html" target="_blank">
+                <i class="uil uil-facebook"></i>
+            </a>
+        </li>
+        <li class=social__item>
+            <a class="social__link" href="https://twitter.com/intent/tweet?url=https://www.dancortez.com.br/posts/webstaticapps.html&text=Título+do+seu+post" target="_blank">
+                <i class="uil uil-twitter"></i>
+            </a>
+        </li>
+        <li class=social__item>
+            <a class="social__link" href="https://www.linkedin.com/shareArticle?url=https://www.dancortez.com.br/posts/webstaticapps.html" target="_blank">
+                <i class="uil uil-linkedin-alt"></i>
+            </a>
+        </li>
 
-    </section>
+        <li class=social__item>
+            <a class="social__link" href="https://www.linkedin.com/shareArticle?url=URL_DO_SEU_POST" target="_blank">
+                <i class="uil uil-whatsapp"></i>
+            </a>
+        </li>
 
-    <footer class=footer>
-        <div class=container>
-                    <div class=footer__inner>
-                        <div class=social>
-                            <ul class="social__list">
-                                <li class=social__item>
-                                    <a class=social__link href="https://www.instagram.com/cortez___daniel/" target=_blank rel=noopener aria-label="Instagram link">
-                                        <i class="uil uil-instagram"></i>
-                                    </a>
-                                </li>
-                                <li class=social__item>
-                                    <a class=social__link href=https://www.linkedin.com/in/daniel-cortez-jr/ target=_blank rel=noopener aria-label="Facebook link">
-                                        <i class="uil uil-linkedin-alt"></i>
-                                    </a>
-                                </li>
-                                <li class=social__item>
-                                    <a class=social__link href=https://github.com/corttezz/ target=_blank rel=noopener aria-label="Github link">
-                                        <i class="uil uil-github"></i>
-                                    </a>
-                                </li>
+    </ul>
+</div>
 
-                            </ul>
-                        </div>
-                        <div class=copyright>
-                            2023 &copy;<a href="#">Daniel Cortez</a>
-                            . All Right Reserved.
-                        </div>
+
+
+
+
+
+</main>
+
+<section class="section bottom__section container">
+    <div class="aboutMe__section bottom__section-section">
+        <h3 class="section__title bottom__section-title aboutMe-lang"> About me </h3>
+        <p class="bottom__section-content aboutContent-lang"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae facilis animi aspernatur ipsa qui debitis
+            minus, fuga esse vero? Esse nobis cupiditate asperiores tempora, laborum ab. Nam facere sequi eos!</p>
+            <span class="button button--flex button--small button--link services__button">
+              <a href="../aboutme/index" class="viewMore-lang" > <p class="viewMore-lang6"> View More </p> </a> 
+                <i class="uil uil-arrow-right button__icon"></i>
+    </div>
+    <div class="projects__section bottom__section-section">
+        <h3 class="section__title bottom__section-title myPosts-lang"> My Posts</h3>
+        <p class="bottom__section-content postsResume-lang"> Explore all of my posts here and delve into more exciting content </p>
+         <span class="button button--flex button--small button--link services__button">
+           <a href="../posts.html" class="viewMore-lang"> <p class="viewMore-lang7"> View More </p>  </a> 
+            <i class="uil uil-arrow-right button__icon"></i> 
+    </div>
+</section>
+
+
+
+<footer class=footer>
+    <div class=container>
+                <div class=footer__inner>
+                    <div class=social>
+                        <ul class="social__list">
+                            <li class=social__item>
+                                <a class=social__link href="https://www.instagram.com/cortez___daniel/" target=_blank rel=noopener aria-label="Instagram link">
+                                    <i class="uil uil-instagram"></i>
+                                </a>
+                            </li>
+                            <li class=social__item>
+                                <a class=social__link href=https://www.linkedin.com/in/daniel-cortez-jr/ target=_blank rel=noopener aria-label="Facebook link">
+                                    <i class="uil uil-linkedin-alt"></i>
+                                </a>
+                            </li>
+                            <li class=social__item>
+                                <a class=social__link href=https://github.com/corttezz/ target=_blank rel=noopener aria-label="Github link">
+                                    <i class="uil uil-github"></i>
+                                </a>
+                            </li>
+
+                        </ul>
                     </div>
-        </div>
-    </footer>
+                    <div class=copyright>
+                        <p> 2023 &copy;Daniel Cortez. </p> <p class="rightReserved-lang"> All Right Reserved. </p>
+                    </div>
+                </div>
+    </div>
+</footer>
+
     <a href="#" class="scrollup" id="scroll-up">
         <i class="uil uil-arrow-up scrollup__icon"></i>
     </a>
+
+    <script src="./script/MLSA-lang.js"></script>
     <script src="./main.js"></script>
-    </body>
+
+  
+
 </html>
-</body>
-</html> 

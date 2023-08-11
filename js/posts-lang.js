@@ -1,7 +1,5 @@
 let langs = document.querySelector(".langs"),
   link = document.querySelectorAll("a"),
-  title = document.querySelector(".title"),
-  descr = document.querySelector(".description"),
 homeLang = document.querySelector(".home-lang"),
 aboutLang = document.querySelector(".about-lang"),
 contactLang = document.querySelector(".contact-lang"),
@@ -30,8 +28,6 @@ link.forEach((el) => {
 
     let attr = el.getAttribute("language");
 
-    title.textContent = data[attr].title;
-    descr.textContent = data[attr].description;
     homeLang.textContent = data[attr].homeLang;
     aboutLang.textContent = data[attr].aboutLang;
     contactLang.textContent = data[attr].contactLang;
@@ -79,26 +75,26 @@ let data = {
       rightReservedLang: "Todos os direitos reservados."
     },
   english: {
-        homeLang: "HOME",
-        aboutLang: "ABOUT",
-        contactLang: "CONTACT",
-        lastPostsLang: "Last Posts",
-        whatIThinkLang: "What i think",
-        IAChallangesLang: "AI Challenges",
-        mlsaLang: "How to Become a Microsoft Student Ambassador",
-        viewMoreLang: "View More",
-        viewMoreLang2: "View More",
-        viewMoreLang3: "View More",
-        viewMoreLang4: "View More",
-        viewMoreLang5: "View More",
-        viewMoreLang6: "View More",
-        viewMoreLang7: "View More",
-        webstaticappsLang: "What is Azure Static Web App?",
-        aboutMeLang: "About Me",
-        aboutContentLang: "About Content",
-        myPostsLang: "My Posts",
-        postsResumeLang: "Explore all my posts and get to know all my content.",
-        rightReservedLang: "All rights reserved."  
+        "homeLang": "HOME",
+        "aboutLang": "ABOUT",
+        "contactLang": "CONTACT",
+        "lastPostsLang": "Last Posts",
+        "whatIThinkLang": "What i think",
+        "mlsaLang": "How to Become a Microsoft Student Ambassador",
+        "viewMoreLang": "View More",
+        "viewMoreLang2": "View More",
+        "viewMoreLang3": "View More",
+        "viewMoreLang4": "View More",
+        "viewMoreLang5": "View More",
+        "viewMoreLang6": "View More",
+        "viewMoreLang7": "View More",
+        "webstaticappsLang": "What is Azure Static Web App?",
+        "IAChallangesLang": "AI Challenges",
+        "aboutMeLang": "About Me",
+        "aboutContentLang": "About Content",
+        "myPostsLang": "My Posts",
+        "postsResumeLang": "Explore all my posts and get to know all my content.",
+        "rightReservedLang": "All rights reserved."  
  },
   spanish: {
         "homeLang": "INICIO",
@@ -148,8 +144,6 @@ function applyLanguage(language) {
 }
 
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const langMenu = document.querySelector(".lang-menu");
   const langSubMenu = langMenu.querySelector("ul");
@@ -164,8 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
   applyLanguage(selectedLanguage);
 
   // Set the initial language
-  title.textContent = data[selectedLanguage].title;
-  descr.textContent = data[selectedLanguage].description;
+
 
   // Set the selected language flag
   if (selectedLanguage === "english") {

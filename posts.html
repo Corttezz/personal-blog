@@ -11,37 +11,63 @@
 <body>
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="../index.html" class="nav__logo"> <img class="logo" src="../src/img/logo.webp" width="170px"> </a>
+            <a href="../index.html" class="nav__logo"> <img class="logo" src="../src/img/logo.webp" width="170px" alt="logo"> </a>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list grid">
                     <li class="nav__item">
-                        <a href="../index.html" class="nav__link active-link">
-                            <i class="uil uil-estate nav__icon"></i> HOME
+                        <a href="./index.html" class="nav__link active-link" aria-label="HOME">
+                            <i class="uil uil-estate nav__icon"></i> <p class="home-lang"> HOME </p> 
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="../aboutme/index.html" class="nav__link">
-                            <i class="uil uil-user nav__icon"></i> ABOUT
+                        <a href="./aboutme/index.html" class="nav__link" aria-label="ABOUT">
+                            <i class="uil uil-user nav__icon"></i> <p class="about-lang" > ABOUT </p>
                         </a>
                     </li>
 
 
-                    </li>
+                    
                     <li class="nav__item">
-                        <a href="../contact/index.html" class="nav__link">
-                            <i class="uil uil-message nav__icon"></i> CONTACT
+                        <a href="./contact/index.html" class="nav__link" aria-label="CONTACT">
+                            <i class="uil uil-message nav__icon"></i> <p class="contact-lang"> CONTACT </p> 
                         </a>
                     </li>
+                    
                 </ul>
                 <i class="uil uil-times nav__close" id="nav-close"></i>
             </div>
 
+
+           
+
+
             <div class="nav__btns">
+                
                 <i class="uil uil-moon change-theme" id="theme-button"></i>
 
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="uil uil-apps"></i>
                 </div>
+
+               
+
+                <div class="lang-menu langs">
+                    <div class="selected-lang">
+                    </div>
+                    <ul>
+                        <li>
+                            <a language="english" href="" class="en active"> EN </a>
+                        </li>
+                        <li>
+                            <a language="portuguese" href="" class="pt">PT-BR</a>
+                        </li>
+                        <li>
+                            <a language="spanish" href="" class="es"> ES </a>
+                        </li>
+                    </ul> 
+                    
+                </div>
+                
             </div>
 
         </nav>
@@ -52,8 +78,8 @@
     <!--  =============== SERVICES ===============  -->
 
     <section class="services section" id="services">
-        <h2 class="section__title">Last Posts</h2>
-        <span class="section__subtitle"> What i think</span>
+        <h2 class="section__title lastPosts-lang">Last Posts</h2>
+        <span class="section__subtitle whatIThink-lang"> What i think</span>
 
         <div class="services__container container grid">
             <!--  =============== SERVICES 1 ===============  -->
@@ -64,11 +90,11 @@
                         <h4>AI</h4>
                         <h4> TEC </h4>
                     </div>
-                    <h3 class="services__title"> <a href="./posts/MLSA.html"> Como se tornar um Microsoft Ambassor Student </a> </h3>
+                    <h3 class="services__title"> <a href="./posts/MLSA.html" class="mlsa-lang"> Como se tornar um Microsoft Ambassor Student </a> </h3>
                 </div>
 
                 <span class="button button--flex button--small button--link services__button">
-                   <a href="./posts/MLSA.html"> View More
+                   <a href="./posts/MLSA.html"> <p class="viewMore-lang"> View More </p>
                     <i class="uil uil-arrow-right button__icon"></i>    
                 </a>
                     
@@ -84,12 +110,12 @@
                         <h4>AI</h4>
                         <h4> TEC </h4>
                     </div>
-                    <h3 class="services__title"> <a href="./posts/webstaticapps.html"> O que é Static Web App da Azure?</a> </h3>
+                    <h3 class="services__title"> <a class="webstaticapps-lang" href="./posts/webstaticapps.html"> O que é Static Web App da Azure?</a> </h3>
                 </div>
 
                 <span class="button button--flex button--small button--link services__button"> 
-                    <a href="./posts/webstaticapps.html">
-                    View More
+                    <a  href="./posts/webstaticapps.html">
+                        <p class="viewMore-lang2"> View More </p>
                     <i class="uil uil-arrow-right button__icon"></i>
                 </a>
                 </span>
@@ -103,12 +129,12 @@
                         <h4>AI</h4>
                         <h4> TEC </h4>
                     </div>
-                    <h3 class="services__title">  <a href="./posts/IA.html"> Os desafios da IA. </a> </h3>
+                    <h3 class="services__title">  <a class="IAChallanges-lang" href="./posts/IA.html"> Os desafios da IA. </a> </h3>
                 </div>
 
                 <span class="button button--flex button--small button--link services__button">
-                    <a href="./posts/IA.html">
-                    View More
+                    <a class="viewMore-lang" href="./posts/IA.html">
+                        <p class="viewMore-lang3"> View More </p>
                     <i class="uil uil-arrow-right button__icon"></i>
                 </a>
                 </span>
@@ -126,31 +152,33 @@
                 </div>
 
                 <span class="button button--flex button--small button--link services__button">
-                    View More
+                    <a class="viewMore-lang"> 
+                        <p class="viewMore-lang4"> View More </p>
                     <i class="uil uil-arrow-right button__icon"></i>
+                    </a>
                 </span>
 
             </div>
         </div>
-    
+        <h2 class="post__viewmore animate__bounceIn" id="animatedDiv"> <a class="viewMore-lang" href="./posts.html"> <p class="viewMore-lang5"> View More </p> <i class="uil uil-arrow-right button__icon"></i>     </a>  </h2>
     </section>
 
 
 
     <section class="section bottom__section container">
         <div class="aboutMe__section bottom__section-section">
-            <h3 class="section__title bottom__section-title"> About me </h3>
-            <p class="bottom__section-content"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae facilis animi aspernatur ipsa qui debitis
+            <h3 class="section__title bottom__section-title aboutMe-lang"> About me </h3>
+            <p class="bottom__section-content aboutContent-lang"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae facilis animi aspernatur ipsa qui debitis
                 minus, fuga esse vero? Esse nobis cupiditate asperiores tempora, laborum ab. Nam facere sequi eos!</p>
                 <span class="button button--flex button--small button--link services__button">
-                  <a href="../aboutme/index.html"> View More </a> 
+                  <a href="./aboutme/index.html" class="viewMore-lang" > <p class="viewMore-lang6"> View More </p> </a> 
                     <i class="uil uil-arrow-right button__icon"></i>
         </div>
         <div class="projects__section bottom__section-section">
-            <h3 class="section__title bottom__section-title"> My Posts</h3>
-            <p class="bottom__section-content"> Explore all of my posts here and delve into more exciting content </p>
+            <h3 class="section__title bottom__section-title myPosts-lang"> My Posts</h3>
+            <p class="bottom__section-content postsResume-lang"> Explore all of my posts here and delve into more exciting content </p>
              <span class="button button--flex button--small button--link services__button">
-               <a href="./posts.html"> View More  </a> 
+               <a href="./posts.html" class="viewMore-lang"> <p class="viewMore-lang7"> View More </p>  </a> 
                 <i class="uil uil-arrow-right button__icon"></i> 
         </div>
 
@@ -180,17 +208,21 @@
                             </ul>
                         </div>
                         <div class=copyright>
-                            2023 &copy;<a href="#">Daniel Cortez</a>
-                            . All Right Reserved.
+                            <p> 2023 &copy;Daniel Cortez. </p> <p class="rightReserved-lang"> All Right Reserved. </p>
                         </div>
                     </div>
         </div>
     </footer>
+
     <a href="#" class="scrollup" id="scroll-up">
         <i class="uil uil-arrow-up scrollup__icon"></i>
     </a>
+
     <script src="./aboutme/main.js"></script>
+    <script src="./js/posts-lang.js"></script>
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     </body>
+
 </html>
-</body>
-</html> 
