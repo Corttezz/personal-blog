@@ -122,14 +122,11 @@ body {
     color: var(--text-color);
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
     color: var(--title-color);
     font-weight: var(--font-semi-bold);
+    margin-bottom: 1.5rem; /* Adicionado espaçamento após os títulos */
 }
-
 ul {
     list-style: none;
 }
@@ -165,6 +162,30 @@ img {
     color: var(--first-color);   
     border-radius: 2px;
     border: solid 1px var(--first-color);
+    margin-bottom: 1rem; /* Adicionado espaçamento após os títulos menores */
+  }
+
+  .post__section ul {
+    margin-bottom: 1.5rem;
+  }
+
+  .post__section a {
+    margin-bottom: 1.5rem;
+  }
+  .post__section img {
+    margin-bottom: 1.5rem;
+  }
+
+  .post__section p {
+    margin-bottom: 1.5rem;
+  }
+
+  div .post__section {
+    padding-top: 25px;
+  }
+
+  .post__container p{
+        margin-bottom: 1.5rem;  
   }
 
   .post__themes{
@@ -183,7 +204,7 @@ img {
 .section__subtitle {
     display: block;
     font-size: var(--small-font-size);
-    margin-bottom: var(--mb-3);
+    margin-bottom: var(--mb-1-5);
 }
 
 .section__title,
@@ -230,10 +251,7 @@ img {
     font-size: 20px;
   }
 
-.projects__section {
-    text-align: center;
-}
-  
+
 
 .bottom__section-section{
     border-top: 2px solid var(--first-color);
@@ -386,10 +404,7 @@ img {
 
     }
 
-    i {
-        font-size: 25px;
-    }
-    
+  
 
     .nav__btns {
         padding-top: 25px;
@@ -900,12 +915,6 @@ span i {
     border-radius: 33px;
 }
 
-.post__img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .post__title{
     margin-top: 120px;
 }
@@ -914,7 +923,6 @@ span i {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 30px;
 }
 
 .desc__post img{
@@ -1018,9 +1026,6 @@ span i {
     .services__content {
         width: 320px;
         padding: 20px;
-    }
-    .post__img img{
-        border-radius: 33px;
     }
 }
 
@@ -1331,3 +1336,10 @@ contact__label {
 .lang-menu ul.show {
     display: block;
 }
+
+strong {
+    font-weight: bold; /* Isso é padrão para o elemento <strong> */
+    color: var(--first-color);
+    font-weight: bold;
+}
+

@@ -4,6 +4,8 @@ let langs = document.querySelector(".langs"),
   aboutLang = document.querySelector(".about-lang"),
   contactLang = document.querySelector(".contact-lang"),
   
+  viewMoreLang6 = document.querySelector(".viewMore-lang6"),
+  viewMoreLang7 = document.querySelector(".viewMore-lang7"),
   aboutMeLang = document.querySelector(".aboutMe-lang"),
   aboutContentLang = document.querySelector(".aboutContent-lang"),
   myPostsLang = document.querySelector(".myPosts-lang"),
@@ -22,6 +24,8 @@ link.forEach((el) => {
       aboutLang.textContent = data[attr].aboutLang;
       contactLang.textContent = data[attr].contactLang;
       
+      viewMoreLang6.textContent = data[attr].viewMoreLang6;
+      viewMoreLang7.textContent = data[attr].viewMoreLang7;
       aboutMeLang.textContent = data[attr].aboutMeLang;
       aboutContentLang.textContent = data[attr].aboutContentLang;
       myPostsLang.textContent = data[attr].myPostsLang;
@@ -36,6 +40,8 @@ let data = {
     aboutLang: "SOBRE",
     contactLang: "CONTATO",
     
+    viewMoreLang6: "Ver Mais",
+    viewMoreLang7: "Ver Mais",
     aboutMeLang: "Sobre Mim",
     aboutContentLang: "Conteúdo Sobre Mim",
     myPostsLang: "Minhas Publicações",
@@ -47,6 +53,8 @@ let data = {
     aboutLang: "ABOUT",
     contactLang: "CONTACT",
     
+    viewMoreLang6: "View More",
+    viewMoreLang7: "View More",
     aboutMeLang: "About Me",
     aboutContentLang: "About Content",
     myPostsLang: "My Posts",
@@ -58,6 +66,8 @@ let data = {
     aboutLang: "SOBRE",
     contactLang: "CONTACTO",
     
+    viewMoreLang6: "Ver Más",
+    viewMoreLang7: "Ver Más",
     aboutMeLang: "Sobre Mí",
     aboutContentLang: "Contenido Sobre Mí",
     myPostsLang: "Mis Publicaciones",
@@ -73,6 +83,8 @@ function applyLanguage(language) {
   aboutLang.textContent = data[language].aboutLang;
   contactLang.textContent = data[language].contactLang;
   
+  viewMoreLang6.textContent = data[language].viewMoreLang6;
+  viewMoreLang7.textContent = data[language].viewMoreLang7;
   aboutMeLang.textContent = data[language].aboutMeLang;
   aboutContentLang.textContent = data[language].aboutContentLang;
   myPostsLang.textContent = data[language].myPostsLang;

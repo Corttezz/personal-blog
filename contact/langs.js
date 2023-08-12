@@ -1,5 +1,4 @@
-
-  let langs = document.querySelector(".langs"),
+let langs = document.querySelector(".langs"),
   link = document.querySelectorAll("a"),
   homeLang = document.querySelector(".home-lang"),
   aboutLang = document.querySelector(".about-lang"),
@@ -9,8 +8,11 @@
   callMeLang = document.querySelector(".callMe-lang"),
   locationLang = document.querySelector(".location-lang"),
   nameLang = document.querySelector(".name-lang"),
+  sendMessageLang = document.querySelector(".sendMessage-lang"),
   projectLang = document.querySelector(".project-lang"),
   messageLang = document.querySelector(".message-lang"),
+  viewMoreLang6 = document.querySelector(".viewMore-lang6"),
+  viewMoreLang7 = document.querySelector(".viewMore-lang7"),
   aboutMeLang = document.querySelector(".aboutMe-lang"),
   aboutContentLang = document.querySelector(".aboutContent-lang"),
   myPostsLang = document.querySelector(".myPosts-lang"),
@@ -19,27 +21,30 @@
 
 link.forEach((el) => {
   el.addEventListener("click", () => {
-      langs.querySelector(".active").classList.remove("active");
-      el.classList.add("active");
+    langs.querySelector(".active").classList.remove("active");
+    el.classList.add("active");
 
-      let attr = el.getAttribute("language");
-      console.log("Selected language:", attr); // Log the selected language
+    let attr = el.getAttribute("language");
+    console.log("Selected language:", attr); // Log the selected language
 
-      homeLang.textContent = data[attr].homeLang;
-      aboutLang.textContent = data[attr].aboutLang;
-      contactLang.textContent = data[attr].contactLang;
-      contactMeLang.textContent = data[attr].contactMeLang;
-      getInTouchLang.textContent = data[attr].getInTouchLang;
-      callMeLang.textContent = data[attr].callMeLang;
-      locationLang.textContent = data[attr].locationLang;
-      nameLang.textContent = data[attr].nameLang;
-      projectLang.textContent = data[attr].projectLang;
-      messageLang.textContent = data[attr].messageLang;
-      aboutMeLang.textContent = data[attr].aboutMeLang;
-      aboutContentLang.textContent = data[attr].aboutContentLang;
-      myPostsLang.textContent = data[attr].myPostsLang;
-      postsResumeLang.textContent = data[attr].postsResumeLang;
-      rightReservedLang.textContent = data[attr].rightReservedLang;
+    homeLang.textContent = data[attr].homeLang;
+    aboutLang.textContent = data[attr].aboutLang;
+    contactLang.textContent = data[attr].contactLang;
+    contactMeLang.textContent = data[attr].contactMeLang;
+    getInTouchLang.textContent = data[attr].getInTouchLang;
+    callMeLang.textContent = data[attr].callMeLang;
+    locationLang.textContent = data[attr].locationLang;
+    nameLang.textContent = data[attr].nameLang;
+    sendMessageLang.textContent = data[attr].sendMessageLang;
+    viewMoreLang6.textContent = data[attr].viewMoreLang6;
+    viewMoreLang7.textContent = data[attr].viewMoreLang7;
+    projectLang.textContent = data[attr].projectLang;
+    messageLang.textContent = data[attr].messageLang;
+    aboutMeLang.textContent = data[attr].aboutMeLang;
+    aboutContentLang.textContent = data[attr].aboutContentLang;
+    myPostsLang.textContent = data[attr].myPostsLang;
+    postsResumeLang.textContent = data[attr].postsResumeLang;
+    rightReservedLang.textContent = data[attr].rightReservedLang;
   });
 });
 
@@ -53,14 +58,18 @@ let data = {
     callMeLang: "Ligue-me",
     locationLang: "Localização",
     nameLang: "Nome",
+    sendMessageLang: "Enviar Mensagem",
+    viewMoreLang6: "Ver Mais",
+    viewMoreLang7: "Ver Mais",
     projectLang: "Projeto",
     messageLang: "Mensagem",
     aboutMeLang: "Sobre Mim",
     aboutContentLang: "Conteúdo Sobre Mim",
     myPostsLang: "Minhas Publicações",
-    postsResumeLang: "Explore todas as minhas publicações e conheça todo o meu conteúdo.",
-    rightReservedLang: "Todos os direitos reservados."
-},
+    postsResumeLang:
+      "Explore todas as minhas publicações e conheça todo o meu conteúdo.",
+    rightReservedLang: "Todos os direitos reservados.",
+  },
   english: {
     homeLang: "HOME",
     aboutLang: "ABOUT",
@@ -70,13 +79,16 @@ let data = {
     callMeLang: "Call me",
     locationLang: "Location",
     nameLang: "Name",
+    sendMessageLang : "Send Message",
+    viewMoreLang6: "View More",
+    viewMoreLang7: "View More",
     projectLang: "Project",
     messageLang: "Message",
     aboutMeLang: "About Me",
     aboutContentLang: "About Content",
     myPostsLang: "My Posts",
     postsResumeLang: "Explore all my posts and get to know all my content.",
-    rightReservedLang: "All rights reserved."
+    rightReservedLang: "All rights reserved.",
   },
   spanish: {
     homeLang: "INICIO",
@@ -87,17 +99,20 @@ let data = {
     callMeLang: "Llámame",
     locationLang: "Ubicación",
     nameLang: "Nombre",
+    sendMessageLang : "Enviar Mensaje", 
+    viewMoreLang6: "Ver Más", 
+    viewMoreLang7: "Ver Más",
     projectLang: "Proyecto",
     messageLang: "Mensaje",
     aboutMeLang: "Sobre Mí",
     aboutContentLang: "Contenido Sobre Mí",
     myPostsLang: "Mis Publicaciones",
-    postsResumeLang: "Explora todas mis publicaciones y conoce todo mi contenido.",
-    rightReservedLang: "Todos los derechos reservados."
-},
+    postsResumeLang:
+      "Explora todas mis publicaciones y conoce todo mi contenido.",
+    rightReservedLang: "Todos los derechos reservados.",
+  },
   // Add more languages as needed
 };
-
 
 function applyLanguage(language) {
   homeLang.textContent = data[language].homeLang;
@@ -108,6 +123,9 @@ function applyLanguage(language) {
   callMeLang.textContent = data[language].callMeLang;
   locationLang.textContent = data[language].locationLang;
   nameLang.textContent = data[language].nameLang;
+  sendMessageLang.textContent = data[language].sendMessageLang;
+  viewMoreLang6.textContent = data[language].viewMoreLang6;
+  viewMoreLang7.textContent = data[language].viewMoreLang7;
   projectLang.textContent = data[language].projectLang;
   messageLang.textContent = data[language].messageLang;
   aboutMeLang.textContent = data[language].aboutMeLang;
@@ -132,46 +150,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Set the selected language flag
   if (selectedLanguage === "english") {
-      selectedFlag.style.backgroundImage = 'url("../src/img/english.webp")';
+    selectedFlag.style.backgroundImage = 'url("../src/img/english.webp")';
   } else if (selectedLanguage === "portuguese") {
-      selectedFlag.style.backgroundImage = 'url("../src/img/portuguese.webp")';
+    selectedFlag.style.backgroundImage = 'url("../src/img/portuguese.webp")';
   } else if (selectedLanguage === "spanish") {
-      selectedFlag.style.backgroundImage = 'url("../src/img/spanish.webp")';
+    selectedFlag.style.backgroundImage = 'url("../src/img/spanish.webp")';
   }
 
   langMenu.addEventListener("click", function () {
-      langSubMenu.classList.toggle("show");
+    langSubMenu.classList.toggle("show");
   });
 
   document.addEventListener("click", function (event) {
-      if (!langMenu.contains(event.target)) {
-          langSubMenu.classList.remove("show");
-      }
+    if (!langMenu.contains(event.target)) {
+      langSubMenu.classList.remove("show");
+    }
   });
 
-  links.forEach(link => {
-      link.addEventListener("click", function (event) {
-          event.preventDefault();
+  links.forEach((link) => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
 
-          links.forEach(link => {
-              link.classList.remove("active");
-          });
-
-          link.classList.add("active");
-
-          let attr = link.getAttribute("language");
-
-          // Update the selected flag image based on language
-          if (attr === "english") {
-              selectedFlag.style.backgroundImage = 'url("../src/img/english.webp")';
-          } else if (attr === "portuguese") {
-              selectedFlag.style.backgroundImage = 'url("../src/img/portuguese.webp")';
-          } else if (attr === "spanish") {
-              selectedFlag.style.backgroundImage = 'url("../src/img/spanish.webp")';
-          }
-
-          // Store the selected language in Local Storage
-          localStorage.setItem("selectedLanguage", attr);
+      links.forEach((link) => {
+        link.classList.remove("active");
       });
+
+      link.classList.add("active");
+
+      let attr = link.getAttribute("language");
+
+      // Update the selected flag image based on language
+      if (attr === "english") {
+        selectedFlag.style.backgroundImage = 'url("../src/img/english.webp")';
+      } else if (attr === "portuguese") {
+        selectedFlag.style.backgroundImage =
+          'url("../src/img/portuguese.webp")';
+      } else if (attr === "spanish") {
+        selectedFlag.style.backgroundImage = 'url("../src/img/spanish.webp")';
+      }
+
+      // Store the selected language in Local Storage
+      localStorage.setItem("selectedLanguage", attr);
+    });
   });
 });
