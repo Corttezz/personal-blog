@@ -1,22 +1,33 @@
 {
   "routes": [
-    { "route": "/", "serve": "/index.html" },
-    { "route": "/aboutme", "serve": "/aboutme/index.html" },
-    { "route": "/contact", "serve": "/contact/index.html" },
-    { "route": "/blog", "serve": "/blog/index.html" }
+    {
+      "route": "/",
+      "serve": "/index.html"
+    },
+    {
+      "route": "/aboutme",
+      "serve": "/aboutme/index.html"
+    },
+    {
+      "route": "/contact",
+      "serve": "/contact/index.html"
+    },
+    {
+      "route": "/blog",
+      "serve": "/blog/index.html"
+    },
+    {
+      "route": "/posts",
+      "serve": "/posts.html"
+    }
   ],
   "navigationFallback": {
-    "rewrite": "/index.html"
+    "rewrite": "/index.html",
+    "exclude": ["/api/*"]
   },
   "responseOverrides": {
     "404": {
       "rewrite": "/index.html"
     }
-  },
-  "rewriteRules": [
-    {
-      "source": "/{*all}.html",
-      "destination": "/{all}"
-    }
-  ]
+  }
 }
