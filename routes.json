@@ -1,24 +1,11 @@
 {
     "routes": [
-      {
-        "route": "/",
-        "serve": "/index.html"
-      },
-      {
-        "route": "/aboutme",
-        "serve": "/aboutme/index.html"
-      },
-      {
-        "route": "/contact",
-        "serve": "/contact/index.html"
-      },
-      {
-        "route": "/blog",
-        "serve": "/blog/index.html"
-      }
+        { "route": "/", "serve": "/index.html" },
+        { "route": "/aboutme", "serve": "/aboutme/index.html" },
+        { "route": "/contact", "serve": "/contact/index.html" },
+        { "route": "/blog", "serve": "/blog/index.html" }
     ],
     "navigationFallback": {
-      "rewrite": "/index.html"
+        "rewrite": "/index.html"
     }
-  }
-  
+}
