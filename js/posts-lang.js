@@ -13,7 +13,10 @@ viewMoreLang4 = document.querySelector(".viewMore-lang4"),
 viewMoreLang5 = document.querySelector(".viewMore-lang5"),
 viewMoreLang6 = document.querySelector(".viewMore-lang6"),
 viewMoreLang7 = document.querySelector(".viewMore-lang7"),
+ribbonLang = document.querySelector(".ribbon"),
+secondRibbonLang = document.querySelector(".second-ribbon"),
 webstaticappsLang = document.querySelector(".webstaticapps-lang"),
+frameworksLang = document.querySelector(".frameworks-lang"),
 IAChallangesLang = document.querySelector(".IAChallanges-lang"),
 aboutMeLang = document.querySelector(".aboutMe-lang"),
 aboutContentLang = document.querySelector(".aboutContent-lang"),
@@ -34,6 +37,9 @@ link.forEach((el) => {
     lastPostsLang.textContent = data[attr].lastPostsLang;
     whatIThinkLang.textContent = data[attr].whatIThinkLang;
     mlsaLang.textContent = data[attr].mlsaLang;
+    frameworksLang.textContent = data[attr].frameworksLang;
+    ribbonLang.textContent = data[attr].ribbonLang;
+    secondRibbonLang.textContent = data[attr].ribbonLang;
     viewMoreLang.textContent = data[attr].viewMoreLang;
     viewMoreLang2.textContent = data[attr].viewMoreLang2;
     viewMoreLang3.textContent = data[attr].viewMoreLang3;
@@ -59,6 +65,9 @@ let data = {
       lastPostsLang: "Últimos Posts",
       whatIThinkLang: "Minhas Opiniões",
       mlsaLang: "Como se tornar um Microsoft Ambassor Student",
+      frameworksLang: "Angular vs React vs Vue.js: qual Framework é melhor?",
+      ribbonLang: "Em breve",
+      secondRibbonLang: "Em breve",
       viewMoreLang: "Ver Mais",
       viewMoreLang2: "Ver Mais",
       viewMoreLang3: "Ver Mais",
@@ -81,6 +90,9 @@ let data = {
         "lastPostsLang": "Last Posts",
         "whatIThinkLang": "What i think",
         "mlsaLang": "How to Become a Microsoft Student Ambassador",
+        "frameworksLang": "Angular vs React vs Vue.js: Which Framework is Better?",
+        "ribbonLang": "Coming Soon",
+        "secondRibbonLang": "Coming Soon",
         "viewMoreLang": "View More",
         "viewMoreLang2": "View More",
         "viewMoreLang3": "View More",
@@ -103,6 +115,9 @@ let data = {
         "lastPostsLang": "Últimos Posts",
         "whatIThinkLang": "Mis Opiniones",
         "mlsaLang": "Cómo Convertirse en un Embajador Estudiantil de Microsoft",
+        "frameworksLang": "Angular vs React vs Vue.js: ¿Qué Framework es Mejor?",
+        "ribbonLang": "Próximamente",
+        "secondRibbonLang": "Próximamente",
         "viewMoreLang": "Ver Más",
         "viewMoreLang2": "Ver Más",
         "viewMoreLang3": "Ver Más",
@@ -134,6 +149,8 @@ function applyLanguage(language) {
     viewMoreLang5.textContent = data[language].viewMoreLang5;
     viewMoreLang6.textContent = data[language].viewMoreLang6;
     viewMoreLang7.textContent = data[language].viewMoreLang7;
+    ribbonLang.textContent = data[language].ribbonLang;
+    secondRibbonLang.textContent = data[language].ribbonLang;
     webstaticappsLang.textContent = data[language].webstaticappsLang;
     IAChallangesLang.textContent = data[language].IAChallangesLang;
     aboutMeLang.textContent = data[language].aboutMeLang;

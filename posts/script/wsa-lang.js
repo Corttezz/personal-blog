@@ -3,7 +3,6 @@ let langs = document.querySelector(".langs"),
   homeLang = document.querySelector(".home-lang"),
   aboutLang = document.querySelector(".about-lang"),
   contactLang = document.querySelector(".contact-lang"),
-  
   viewMoreLang6 = document.querySelector(".viewMore-lang6"),
   viewMoreLang7 = document.querySelector(".viewMore-lang7"),
   aboutMeLang = document.querySelector(".aboutMe-lang"),
@@ -12,64 +11,65 @@ let langs = document.querySelector(".langs"),
   postsResumeLang = document.querySelector(".postsResume-lang"),
   rightReservedLang = document.querySelector(".rightReserved-lang");
 
-  titleLang = document.querySelector(".title-post"),
-  authorLang = document.querySelector(".author-lang"),
-  shareLang = document.querySelector(".share-lang"),
-  paragraphLang = document.querySelector(".post__content"),
-  ulLang = document.querySelectorAll(".ul-lang");
+(titleLang = document.querySelector(".title-post")),
+  (authorLang = document.querySelector(".author-lang")),
+  (shareLang = document.querySelector(".share-lang")),
+  (paragraphLang = document.querySelector(".post__content")),
+  (ulLang = document.querySelectorAll(".ul-lang"));
 
+link.forEach((el) => {
+  el.addEventListener("click", () => {
+    langs.querySelector(".active").classList.remove("active");
+    el.classList.add("active");
 
-  link.forEach((el) => {
-    el.addEventListener("click", () => {
-        langs.querySelector(".active").classList.remove("active");
-        el.classList.add("active");
-  
-        let attr = el.getAttribute("language");
-  
-        homeLang.textContent = data[attr].homeLang;
-        aboutLang.textContent = data[attr].aboutLang;
-        contactLang.textContent = data[attr].contactLang;
-        
-        viewMoreLang6.textContent = data[attr].viewMoreLang6;
-        viewMoreLang7.textContent = data[attr].viewMoreLang7;
-        aboutMeLang.textContent = data[attr].aboutMeLang;
-        aboutContentLang.textContent = data[attr].aboutContentLang;
-        myPostsLang.textContent = data[attr].myPostsLang;
-        postsResumeLang.textContent = data[attr].postsResumeLang;
-        rightReservedLang.textContent = data[attr].rightReservedLang;
-        titleLang.textContent = data[attr].titleLang;
-        authorLang.textContent = data[attr].authorLang;
-        shareLang.textContent = data[attr].shareLang;
-        paragraphLang.innerHTML = data[attr].paragraphLang;
-  
-        ulLang.forEach((ul, index) => {
-            let listItems = ul.querySelectorAll("li");
-            listItems.forEach((li, liIndex) => {
-                li.innerHTML = data[attr].ulLang[index][liIndex];
-            });
-        });
+    let attr = el.getAttribute("language");
+
+    homeLang.textContent = data[attr].homeLang;
+    aboutLang.textContent = data[attr].aboutLang;
+    contactLang.textContent = data[attr].contactLang;
+
+    viewMoreLang6.textContent = data[attr].viewMoreLang6;
+    viewMoreLang7.textContent = data[attr].viewMoreLang7;
+    aboutMeLang.textContent = data[attr].aboutMeLang;
+    aboutContentLang.textContent = data[attr].aboutContentLang;
+    myPostsLang.textContent = data[attr].myPostsLang;
+    postsResumeLang.textContent = data[attr].postsResumeLang;
+    rightReservedLang.textContent = data[attr].rightReservedLang;
+    titleLang.textContent = data[attr].titleLang;
+    authorLang.textContent = data[attr].authorLang;
+    shareLang.textContent = data[attr].shareLang;
+    paragraphLang.innerHTML = data[attr].paragraphLang;
+
+    ulLang.forEach((ul, index) => {
+      let listItems = ul.querySelectorAll("li");
+      listItems.forEach((li, liIndex) => {
+        li.innerHTML = data[attr].ulLang[index][liIndex];
+      });
     });
   });
-  let data = {
-    portuguese: {
-      homeLang: "INÍCIO",
-      aboutLang: "SOBRE",
-      contactLang: "CONTATO",
-      
-      viewMoreLang6: "Ver Mais",
-      viewMoreLang7: "Ver Mais",
-      aboutMeLang: "Sobre Mim",
-      aboutContentLang: "Conteúdo Sobre Mim",
-      myPostsLang: "Minhas Publicações",
-      postsResumeLang: "Explore todas as minhas publicações e conheça todo o meu conteúdo.",
-      rightReservedLang: "Todos os direitos reservados.",
-      titleLang: "Static Web Apps: O Futuro da Hospedagem de Sites Simples",
-      authorLang: "Daniel Cortez - 18 de ago. de 2024",
-      shareLang: "Compartilhar",
-      paragraphLang: `
-          <p>Com o crescimento exponencial da web e a necessidade de entregar conteúdos mais rápidos e acessíveis, as <strong>Static Web Apps</strong> surgem como uma solução prática e eficiente. Mas o que são exatamente essas aplicações estáticas e por que elas estão ganhando tanta popularidade? Vamos explorar esse conceito e entender como ele pode revolucionar a forma como construímos e hospedamos sites.</p>
+});
+let data = {
+  portuguese: {
+    homeLang: "INÍCIO",
+    aboutLang: "SOBRE",
+    contactLang: "CONTATO",
+
+    viewMoreLang6: "Ver Mais",
+    viewMoreLang7: "Ver Mais",
+    aboutMeLang: "Sobre Mim",
+    aboutContentLang: "Conteúdo Sobre Mim",
+    myPostsLang: "Minhas Publicações",
+    postsResumeLang:
+      "Explore todas as minhas publicações e conheça todo o meu conteúdo.",
+    rightReservedLang: "Todos os direitos reservados.",
+    titleLang: "Static Web Apps: O Futuro da Hospedagem de Sites Simples",
+    authorLang: "Daniel Cortez - 18 de ago. de 2024",
+    shareLang: "Compartilhar",
+    paragraphLang: `
+          <p>Com o crescimento exponencial da web e a necessidade de entregar conteúdos mais rápidos e acessíveis, as <a href="https://azure.microsoft.com/products/app-service/static?wt.mc_id=studentamb_252398"><strong>Static Web Apps</strong></a>
+ surgem como uma solução prática e eficiente. Mas o que são exatamente essas aplicações estáticas e por que elas estão ganhando tanta popularidade? Vamos explorar esse conceito e entender como ele pode revolucionar a forma como construímos e hospedamos sites.</p>
           <h3>O Que São Static Web Apps?</h3>
-          <p>Uma Static Web App é, como o nome sugere, uma aplicação web composta por arquivos estáticos – HTML, CSS, JavaScript, e imagens. Diferente das aplicações dinâmicas, que dependem de um servidor para processar lógica no lado do servidor e gerar conteúdo em tempo real, as aplicações estáticas são pré-compiladas e entregues diretamente ao navegador do usuário. Isso significa que o conteúdo é carregado rapidamente, sem a necessidade de processamento adicional no servidor.</p>
+          <p>Uma Static Web App é, como o nome sugere, uma aplicação web composta por arquivos estáticos – HTML, CSS, JavaScript, e imagens (como esse site). Diferente das aplicações dinâmicas, que dependem de um servidor para processar lógica no lado do servidor e gerar conteúdo em tempo real, as aplicações estáticas são pré-compiladas e entregues diretamente ao navegador do usuário. Isso significa que o conteúdo é carregado rapidamente, sem a necessidade de processamento adicional no servidor.</p>
           <div class="post__img"><img width="50%" src="../src/img/static-dynamic.webp" alt="Comparação entre Aplicações Estáticas e Dinâmicas"></div>
           <br>
           <h3>Vantagens das Static Web Apps</h3>
@@ -113,29 +113,35 @@ let langs = document.querySelector(".langs"),
           <h3>Conclusão</h3>
           <p>As Static Web Apps estão se tornando uma escolha cada vez mais popular para desenvolvedores que buscam simplicidade, velocidade e segurança. Elas são ideais para muitos tipos de sites e oferecem uma abordagem moderna para a hospedagem e entrega de conteúdo na web. Com a adoção crescente de ferramentas e plataformas que suportam essas aplicações, nunca houve um momento melhor para explorar e adotar essa tecnologia em seus projetos.</p>
           <p>Seja você um desenvolvedor experiente ou alguém que está apenas começando no mundo do desenvolvimento web, explorar as possibilidades das Static Web Apps pode abrir portas para novas oportunidades e maneiras inovadoras de criar e compartilhar conteúdo online.</p>
+<br>
+          <p>
+  Se você está interessado em aprender mais sobre Aplicativos Web Estáticos no Azure, confira o overview completo disponível na documentação oficial da Microsoft. Clique no link abaixo para saber mais:
+</p>
+<p>
+  <a href="https://learn.microsoft.com/azure/static-web-apps/overview?wt.mc_id=studentamb_252398" target="_blank">Saiba mais sobre Aplicativos Web Estáticos no Azure</a>
+</p>
+      `,
+  },
+  english: {
+    homeLang: "HOME",
+    aboutLang: "ABOUT",
+    contactLang: "CONTACT",
 
-          <p>penis</p>
-      `
-    },
-    english: {
-      homeLang: "HOME",
-      aboutLang: "ABOUT",
-      contactLang: "CONTACT",
-      
-      viewMoreLang6: "View More",
-      viewMoreLang7: "View More",
-      aboutMeLang: "About Me",
-      aboutContentLang: "About Content",
-      myPostsLang: "My Posts",
-      postsResumeLang: "Explore all my posts and get to know all my content.",
-      rightReservedLang: "All rights reserved.",
-      titleLang: "Static Web Apps: The Future of Simple Website Hosting",
-      authorLang: "Daniel Cortez - Aug 18, 2024",
-      shareLang: "Share",
-      paragraphLang: `
-          <p>With the exponential growth of the web and the need to deliver faster and more accessible content, <strong>Static Web Apps</strong> emerge as a practical and efficient solution. But what exactly are these static applications and why are they gaining so much popularity? Let's explore this concept and understand how it can revolutionize the way we build and host websites.</p>
+    viewMoreLang6: "View More",
+    viewMoreLang7: "View More",
+    aboutMeLang: "About Me",
+    aboutContentLang: "About Content",
+    myPostsLang: "My Posts",
+    postsResumeLang: "Explore all my posts and get to know all my content.",
+    rightReservedLang: "All rights reserved.",
+    titleLang: "Static Web Apps: The Future of Simple Website Hosting",
+    authorLang: "Daniel Cortez - Aug 18, 2024",
+    shareLang: "Share",
+    paragraphLang: `
+          <p>With the exponential growth of the web and the need to deliver faster and more accessible content, <a href="https://azure.microsoft.com/products/app-service/static?wt.mc_id=studentamb_252398"><strong>Static Web Apps</strong></a>
+ emerge as a practical and efficient solution. But what exactly are these static applications and why are they gaining so much popularity? Let's explore this concept and understand how it can revolutionize the way we build and host websites.</p>
           <h3>What Are Static Web Apps?</h3>
-          <p>A Static Web App is, as the name suggests, a web application composed of static files – HTML, CSS, JavaScript, and images. Unlike dynamic applications, which rely on a server to process logic on the server side and generate content in real-time, static applications are pre-compiled and delivered directly to the user's browser. This means that content loads quickly, without the need for additional server-side processing.</p>
+          <p>A Static Web App is, as the name suggests, a web application composed of static files – HTML, CSS, JavaScript, and images (like this website). Unlike dynamic applications, which rely on a server to process logic on the server side and generate content in real-time, static applications are pre-compiled and delivered directly to the user's browser. This means that content loads quickly, without the need for additional server-side processing.</p>
           <div class="post__img"><img width="50%" src="../src/img/static-dynamic.webp" alt="Comparison between Static and Dynamic Applications"></div>
           <br>
           <h3>Advantages of Static Web Apps</h3>
@@ -177,29 +183,35 @@ let langs = document.querySelector(".langs"),
           <h3>Conclusion</h3>
           <p>Static Web Apps are becoming an increasingly popular choice for developers looking for simplicity, speed, and security. They are ideal for many types of sites and offer a modern approach to web hosting and content delivery. With the growing adoption of tools and platforms that support these applications, there has never been a better time to explore and adopt this technology in your projects.</p>
           <p>Whether you are an experienced developer or someone just starting in the world of web development, exploring the possibilities of Static Web Apps can open doors to new opportunities and innovative ways to create and share content online.</p>
-      <p>peniss</p>
-          `
-    },
-    spanish: {
-      homeLang: "INICIO",
-      aboutLang: "SOBRE",
-      contactLang: "CONTACTO",
-      
-      viewMoreLang6: "Ver Más",
-      viewMoreLang7: "Ver Más",
-      aboutMeLang: "Sobre Mí",
-      aboutContentLang: "Contenido Sobre Mí",
-      myPostsLang: "Mis Publicaciones",
-      postsResumeLang: "Explora todas mis publicaciones y conoce todo mi contenido.",
-      rightReservedLang: "Todos los derechos reservados.",
-      titleLang: "Static Web Apps: El Futuro de la Hospedaje de Sitios Simples",
-      authorLang: "Daniel Cortez - 18 de ago. de 2024",
-      shareLang: "Compartir",
-      paragraphLang: `
-          <p>Con el crecimiento exponencial de la web y la necesidad de entregar contenido más rápido y accesible, las <strong>Static Web Apps</strong> surgen como una solución práctica y eficiente. Pero, ¿qué son exactamente estas aplicaciones estáticas y por qué están ganando tanta popularidad? Vamos a explorar este concepto y entender cómo puede revolucionar la forma en que construimos y alojamos sitios web.</p>
+      <p>br</p>
+            <p>If you are interested in learning more about Static Web Apps on Azure, check out the full overview available in the official Microsoft documentation. Click the link below to learn more:</p>
+            <p>
+                <a href="https://learn.microsoft.com/azure/static-web-apps/overview?wt.mc_id=studentamb_252398" target="_blank">Learn more about Static Web Apps on Azure</a>
+            </p>
+          `,
+  },
+  spanish: {
+    homeLang: "INICIO",
+    aboutLang: "SOBRE",
+    contactLang: "CONTACTO",
+
+    viewMoreLang6: "Ver Más",
+    viewMoreLang7: "Ver Más",
+    aboutMeLang: "Sobre Mí",
+    aboutContentLang: "Contenido Sobre Mí",
+    myPostsLang: "Mis Publicaciones",
+    postsResumeLang:
+      "Explora todas mis publicaciones y conoce todo mi contenido.",
+    rightReservedLang: "Todos los derechos reservados.",
+    titleLang: "Static Web Apps: El Futuro de la Hospedaje de Sitios Simples",
+    authorLang: "Daniel Cortez - 18 de ago. de 2024",
+    shareLang: "Compartir",
+    paragraphLang: `
+          <p>Con el crecimiento exponencial de la web y la necesidad de entregar contenido más rápido y accesible, las <a href="https://azure.microsoft.com/products/app-service/static?wt.mc_id=studentamb_252398"><strong>Static Web Apps</strong></a>
+ surgen como una solución práctica y eficiente. Pero, ¿qué son exactamente estas aplicaciones estáticas y por qué están ganando tanta popularidad? Vamos a explorar este concepto y entender cómo puede revolucionar la forma en que construimos y alojamos sitios web.</p>
           <br>
           <h3>¿Qué son las Static Web Apps?</h3>
-          <p>Una Static Web App es, como su nombre lo indica, una aplicación web compuesta por archivos estáticos: HTML, CSS, JavaScript e imágenes. A diferencia de las aplicaciones dinámicas, que dependen de un servidor para procesar la lógica en el lado del servidor y generar contenido en tiempo real, las aplicaciones estáticas se pre-compilan y se entregan directamente al navegador del usuario. Esto significa que el contenido se carga rápidamente, sin la necesidad de procesamiento adicional en el servidor.</p>
+          <p>Una Static Web App es, como su nombre lo indica, una aplicación web compuesta por archivos estáticos: HTML, CSS, JavaScript e imágenes (como este sitio web). A diferencia de las aplicaciones dinámicas, que dependen de un servidor para procesar la lógica en el lado del servidor y generar contenido en tiempo real, las aplicaciones estáticas se pre-compilan y se entregan directamente al navegador del usuario. Esto significa que el contenido se carga rápidamente, sin la necesidad de procesamiento adicional en el servidor.</p>
           <div class="post__img"><img width="50%" src="../src/img/static-dynamic.webp" alt="Comparación entre Aplicaciones Estáticas y Dinámicas"></div>
                   <br>
           <h3>Ventajas de las Static Web Apps</h3>
@@ -243,38 +255,40 @@ let langs = document.querySelector(".langs"),
           <h3>Conclusión</h3>
           <p>Las Static Web Apps están convirtiéndose en una elección cada vez más popular para los desarrolladores que buscan simplicidad, velocidad y seguridad. Son ideales para muchos tipos de sitios y ofrecen un enfoque moderno para el alojamiento y la entrega de contenido en la web. Con la creciente adopción de herramientas y plataformas que admiten estas aplicaciones, nunca ha habido un mejor momento para explorar y adoptar esta tecnología en sus proyectos.</p>
           <p>Ya sea que seas un desarrollador experimentado o alguien que recién comienza en el mundo del desarrollo web, explorar las posibilidades de las Static Web Apps puede abrir puertas a nuevas oportunidades y formas innovadoras de crear y compartir contenido en línea.</p>
-      <p> oi </p>
-          `
-    }
-  };
+          <br>
+            <p> Si está interesado en aprender más sobre Aplicaciones Web Estáticas en Azure, consulte la descripción general completa disponible en la documentación oficial de Microsoft. Haga clic en el enlace a continuación para obtener más información:</p>
+            <p>
+                <a href="https://learn.microsoft.com/azure/static-web-apps/overview?wt.mc_id=studentamb_252398" target="_blank">Más información sobre Aplicaciones Web Estáticas en Azure</a>
+            </p>
+          `,
+  },
+};
 
+function applyLanguage(language) {
+  homeLang.textContent = data[language].homeLang;
+  aboutLang.textContent = data[language].aboutLang;
+  contactLang.textContent = data[language].contactLang;
 
-  function applyLanguage(language) {
-    homeLang.textContent = data[language].homeLang;
-    aboutLang.textContent = data[language].aboutLang;
-    contactLang.textContent = data[language].contactLang;
-    
-    viewMoreLang6.textContent = data[language].viewMoreLang6;
-    viewMoreLang7.textContent = data[language].viewMoreLang7;
-    aboutMeLang.textContent = data[language].aboutMeLang;
-    aboutContentLang.textContent = data[language].aboutContentLang;
-    myPostsLang.textContent = data[language].myPostsLang;
-    postsResumeLang.textContent = data[language].postsResumeLang;
-    rightReservedLang.textContent = data[language].rightReservedLang;
-    titleLang.textContent = data[language].titleLang;
-    document.title = data[language].titleLang; // Atualiza o título da página
-    authorLang.innerHTML = data[language].authorLang;
-    shareLang.textContent = data[language].shareLang;
-    paragraphLang.innerHTML = data[language].paragraphLang;
-  }
-  
+  viewMoreLang6.textContent = data[language].viewMoreLang6;
+  viewMoreLang7.textContent = data[language].viewMoreLang7;
+  aboutMeLang.textContent = data[language].aboutMeLang;
+  aboutContentLang.textContent = data[language].aboutContentLang;
+  myPostsLang.textContent = data[language].myPostsLang;
+  postsResumeLang.textContent = data[language].postsResumeLang;
+  rightReservedLang.textContent = data[language].rightReservedLang;
+  titleLang.textContent = data[language].titleLang;
+  document.title = data[language].titleLang; // Atualiza o título da página
+  authorLang.innerHTML = data[language].authorLang;
+  shareLang.textContent = data[language].shareLang;
+  paragraphLang.innerHTML = data[language].paragraphLang;
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   const langMenu = document.querySelector(".lang-menu");
   const langSubMenu = langMenu.querySelector("ul");
   const links = langSubMenu.querySelectorAll("a");
   const selectedFlag = document.querySelector(".selected-lang");
- 
+
   // Get the selected language from Local Storage (or default to 'english')
   let selectedLanguage = localStorage.getItem("selectedLanguage") || "english";
 
@@ -282,46 +296,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Set the selected language flag
   if (selectedLanguage === "english") {
-      selectedFlag.style.backgroundImage = 'url("../src/img/english.webp")';
+    selectedFlag.style.backgroundImage = 'url("../src/img/english.webp")';
   } else if (selectedLanguage === "portuguese") {
-      selectedFlag.style.backgroundImage = 'url("../src/img/portuguese.webp")';
+    selectedFlag.style.backgroundImage = 'url("../src/img/portuguese.webp")';
   } else if (selectedLanguage === "spanish") {
-      selectedFlag.style.backgroundImage = 'url("../src/img/spanish.webp")';
+    selectedFlag.style.backgroundImage = 'url("../src/img/spanish.webp")';
   }
 
   langMenu.addEventListener("click", function () {
-      langSubMenu.classList.toggle("show");
+    langSubMenu.classList.toggle("show");
   });
 
   document.addEventListener("click", function (event) {
-      if (!langMenu.contains(event.target)) {
-          langSubMenu.classList.remove("show");
-      }
+    if (!langMenu.contains(event.target)) {
+      langSubMenu.classList.remove("show");
+    }
   });
 
-  links.forEach(link => {
-      link.addEventListener("click", function (event) {
-          event.preventDefault();
+  links.forEach((link) => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
 
-          links.forEach(link => {
-              link.classList.remove("active");
-          });
-
-          link.classList.add("active");
-
-          let attr = link.getAttribute("language");
-
-          // Update the selected flag image based on language
-          if (attr === "english") {
-              selectedFlag.style.backgroundImage = 'url("../src/img/english.webp")';
-          } else if (attr === "portuguese") {
-              selectedFlag.style.backgroundImage = 'url("../src/img/portuguese.webp")';
-          } else if (attr === "spanish") {
-              selectedFlag.style.backgroundImage = 'url("../src/img/spanish.webp")';
-          }
-
-          // Store the selected language in Local Storage
-          localStorage.setItem("selectedLanguage", attr);
+      links.forEach((link) => {
+        link.classList.remove("active");
       });
+
+      link.classList.add("active");
+
+      let attr = link.getAttribute("language");
+
+      // Update the selected flag image based on language
+      if (attr === "english") {
+        selectedFlag.style.backgroundImage = 'url("../src/img/english.webp")';
+      } else if (attr === "portuguese") {
+        selectedFlag.style.backgroundImage =
+          'url("../src/img/portuguese.webp")';
+      } else if (attr === "spanish") {
+        selectedFlag.style.backgroundImage = 'url("../src/img/spanish.webp")';
+      }
+
+      // Store the selected language in Local Storage
+      localStorage.setItem("selectedLanguage", attr);
+    });
   });
 });

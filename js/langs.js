@@ -15,6 +15,10 @@ viewMoreLang4 = document.querySelector(".viewMore-lang4"),
 viewMoreLang5 = document.querySelector(".viewMore-lang5"),
 viewMoreLang6 = document.querySelector(".viewMore-lang6"),
 viewMoreLang7 = document.querySelector(".viewMore-lang7"),
+frameworksLang = document.querySelector(".frameworks-lang"),
+// ribbon
+ribbonLang = document.querySelector(".ribbon"),
+secondRibbonLang = document.querySelector(".second-ribbon"),
 webstaticappsLang = document.querySelector(".webstaticapps-lang"),
 IAChallangesLang = document.querySelector(".IAChallanges-lang"),
 aboutMeLang = document.querySelector(".aboutMe-lang"),
@@ -45,6 +49,9 @@ link.forEach((el) => {
     viewMoreLang5.textContent = data[attr].viewMoreLang5;
     viewMoreLang6.textContent = data[attr].viewMoreLang6;
     viewMoreLang7.textContent = data[attr].viewMoreLang7;
+    frameworksLang.textContent = data[attr].frameworksLang;
+    ribbonLang.textContent = data[attr].ribbonLang;
+    secondRibbonLang.textContent = data[attr].ribbonLang;
     webstaticappsLang.textContent = data[attr].webstaticappsLang;
     IAChallangesLang.textContent = data[attr].IAChallangesLang;
     aboutMeLang.textContent = data[attr].aboutMeLang;
@@ -70,6 +77,10 @@ let data = {
       viewMoreLang5: "Ver Mais",
       viewMoreLang6: "Ver Mais",
       viewMoreLang7: "Ver Mais",
+      frameworksLang: "Angular vs React vs Vue.js: qual Framework é melhor?",
+      // ribbon
+      ribbonLang: "Em breve",
+      secondRibbonLang: "Em breve",
       webstaticappsLang: "O que é Static Web App da Azure?",
       IAChallangesLang: "Desafios de IA",
       aboutMeLang: "Sobre Mim",
@@ -93,6 +104,10 @@ let data = {
         viewMoreLang5: "View More",
         viewMoreLang6: "View More",
         viewMoreLang7: "View More",
+        frameworksLang: "Angular vs React vs Vue.js: Which Framework is Better?",
+        // ribbon
+        ribbonLang: "Coming Soon",
+        secondRibbonLang: "Coming Soon",
         webstaticappsLang: "What is Azure Static Web App?",
         aboutMeLang: "About Me",
         aboutContentLang: "About Content",
@@ -114,6 +129,10 @@ let data = {
         "viewMoreLang5": "Ver Más",
         "viewMoreLang6": "Ver Más",
         "viewMoreLang7": "Ver Más",
+        "frameworksLang": "Angular vs React vs Vue.js: ¿Qué Framework es Mejor?",
+        // ribbon
+        "ribbonLang": "Próximamente",
+        "secondRibbonLang": "Próximamente",
         "webstaticappsLang": "¿Qué es Azure Static Web App?",
         "IAChallangesLang": "Desafíos de IA",
         "aboutMeLang": "Sobre Mí",
